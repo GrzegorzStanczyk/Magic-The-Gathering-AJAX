@@ -1,0 +1,42 @@
+.cursor {
+	z-index: 100;
+	width: 5%;
+	height: 100%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all .3s ease-in-out;
+
+	&:hover {
+		background-color: $cursor-bar;
+
+		&:after {
+		    opacity: .8;
+		}
+
+	}
+	&:after {
+    	opacity: .3;
+    	transition: all .3s ease-in-out;
+	}
+}
+
+.left-cursor:after {
+	content: "";
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid $cursor-color;
+}
+
+.right-cursor {
+	right: 0;
+
+	&:after {
+		content: "";
+		border-top: 20px solid transparent;
+	  	border-bottom: 20px solid transparent;
+	  	border-left: 20px solid $cursor-color;
+	}
+}
