@@ -170,3 +170,7 @@ img:hover {
   li {
     width: 50%;
     height: 100%; } }
+
+@media screen and (max-height: 940px) {
+  li {
+    height: 50%; } }
