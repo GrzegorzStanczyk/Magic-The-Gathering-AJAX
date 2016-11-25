@@ -134,7 +134,6 @@ img {
   transition: all .5s ease; }
 
 img:hover {
-  position: absolute;
   width: -webkit-calc(5% + 223px);
   width: calc(5% + 223px);
   height: -webkit-calc(5% + 311px);

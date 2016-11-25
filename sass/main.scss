@@ -91,7 +91,6 @@ img {
 }
 
 img:hover {
-	position: absolute;
 	width: calc(5% + #{$imgWidth});
 	height: calc(5% + #{$imgHeight});
 }
