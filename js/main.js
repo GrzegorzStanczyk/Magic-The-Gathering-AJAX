@@ -14,7 +14,10 @@ $(function() {
 				$cardsList.append(addCard(cards[i].multiverseid, cards[i].type, cards[i].colors))
 			}
 		}
-		carousel()
+
+    if(/Android|webOS|iPhone|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent) == false) {
+        carousel()
+    }
   })
 
 	function addCard(img, type, color) {
@@ -27,12 +30,10 @@ $(function() {
 		return $card
 	}
 
-	function carousel() {
+  function carousel() {
 
       var slidesLenght = $('li:nth-child(3n+1)').length
-
       var actualPosition = 0
-
 			var $leftButton = $('.left-cursor')
 			var $rightButton = $('.right-cursor')
 			var $overflowContent = $('.container')
@@ -44,8 +45,8 @@ $(function() {
 
 				console.log(actualPosition)
 				if (actualPosition>=contentWidth) return
-
 				actualPosition+=widthSlide
+
 				$overflowContent.animate({scrollLeft: actualPosition}, 400)
 			})
 
@@ -56,15 +57,9 @@ $(function() {
 
 				console.log(actualPosition)
 				if (actualPosition == 0) return
-
 				actualPosition-=widthSlide
+
 				$overflowContent.animate({scrollLeft: actualPosition}, 400)
 			})
 	}
-
-
-
-
-
-
 })
